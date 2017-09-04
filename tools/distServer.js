@@ -4,7 +4,7 @@ import open from 'open';
 
 /* eslint-disable no-console */
 
-const port = 80;
+const port = 3000;
 const app = express();
 
 app.use(express.static('dist'));
@@ -14,9 +14,9 @@ app.get('*', function(req, res) {
 });
 
 app.listen(port, function(err) {
-  	if (err) {
-    	console.log(err);
-  	} else {
-    	open(`http://vikasgupta.me/techscan:${port}`);
-  	}
+  if (err) {
+    console.log(err);
+  } else {
+    open(`http://localhost:${port}`);
+  }
 });
