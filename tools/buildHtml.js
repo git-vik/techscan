@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'file-system';
 import cheerio from 'cheerio';
 import colors from 'colors';
 

@@ -33,6 +33,9 @@ export default {
         }, {
             test: /(\.css)$/,
             loader: ExtractTextPlugin.extract("css?sourceMap")
+        }, { 
+            test: /\.(png|jpg)$/, 
+            loader: 'url-loader?limit=8192'
         }, {
             test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
             loader: 'file'
