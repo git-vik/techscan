@@ -22,7 +22,8 @@ export default {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin(GLOBALS),
         new ExtractTextPlugin('styles.css'),
-        new webpack.optimize.DedupePlugin()
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin()
     ],
     module: {
         loaders: [{
@@ -45,11 +46,5 @@ export default {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
             loader: 'url?limit=10000&mimetype=image/svg+xml'
         }]
-    },
-    test: /\.jsx?$/,         // Match both .js and .jsx files
-    exclude: /node_modules/, 
-    loader: "babel", 
-    query:{
-        presets:['react', 'es2015']
     }
 };
