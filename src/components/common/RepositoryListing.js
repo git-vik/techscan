@@ -70,8 +70,8 @@ class RepositoryListing extends React.Component{
 						<div className="repo-info-figures" data-user={repo.owner.login}>
 							<div className="repo-language" data-user={repo.owner.login}>{repo.language}</div>
 							<br />
-							<div className="repo-stars" data-user={repo.owner.login}><img src="http://www.freeiconspng.com/uploads/black-star-icon-6.png" alt="" data-user={repo.owner.login} /> <span data-user={repo.owner.login}>{repo.stargazers_count}</span></div>
-							<div className="repo-forks" data-user={repo.owner.login}><img src="https://cdn0.iconfinder.com/data/icons/hippicons-technology/64/code-fork-64.png" alt="" data-user={repo.owner.login} /><span data-user={repo.owner.login}>{repo.forks}</span></div>
+							<div className="repo-stars" data-user={repo.owner.login}><img src={require('../../../assets/img/star.png')} alt="" data-user={repo.owner.login} /> <span data-user={repo.owner.login}>{repo.stargazers_count}</span></div>
+							<div className="repo-forks" data-user={repo.owner.login}><img src={require('../../../assets/img/fork.png')} alt="" data-user={repo.owner.login} /><span data-user={repo.owner.login}>{repo.forks}</span></div>
 						</div>
 					</div>
 				</a>
@@ -85,7 +85,7 @@ class RepositoryListing extends React.Component{
 				{
 					this.state.firstTime ? 
 						<div className="getStarted">
-							<img src="http://www.myiconfinder.com/uploads/iconsets/256-256-26fd7cc4e8e8dda0b062f35d70708d64.png" />
+							<img src={require('../../../assets/img/select.png')} />
 						</div>
 					:
 					<div style={{height: '100%'}}>
@@ -99,7 +99,7 @@ class RepositoryListing extends React.Component{
 								onChange={this.onRepoChange}
 								onKeyPress={this.whileTyping}
 								value={this.state.repoName} placeholder="Search repositories here.." />
-							<img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png"  alt="" onClick={this.submitQuery} className="search-btn" />
+							<img src={require('../../../assets/img/search.png')}  alt="" onClick={this.submitQuery} className="search-btn" />
 						</div>
 						<div className="repo-search-results-count">
 							<p>{this.state.repos.total_count} results found.</p>

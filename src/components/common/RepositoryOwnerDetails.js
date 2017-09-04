@@ -54,8 +54,8 @@ class RepositoryOwnerDetails extends React.Component{
 						<div className="repo-info-figures" data-user={repo.owner.login}>
 							<div className="repo-language" data-user={repo.owner.login}>{repo.language}</div>
 							<br />
-							<div className="repo-stars" data-user={repo.owner.login}><img src="http://www.freeiconspng.com/uploads/black-star-icon-6.png" alt="" data-user={repo.owner.login} /> <span data-user={repo.owner.login}>{repo.stargazers_count}</span></div>
-							<div className="repo-forks" data-user={repo.owner.login}><img src="https://cdn0.iconfinder.com/data/icons/hippicons-technology/64/code-fork-64.png" alt="" data-user={repo.owner.login} /><span data-user={repo.owner.login}>{repo.forks}</span></div>
+							<div className="repo-stars" data-user={repo.owner.login}><img src={require('../../../assets/img/star.png')} alt="" data-user={repo.owner.login} /> <span data-user={repo.owner.login}>{repo.stargazers_count}</span></div>
+							<div className="repo-forks" data-user={repo.owner.login}><img src={require('../../../assets/img/fork.png')} alt="" data-user={repo.owner.login} /><span data-user={repo.owner.login}>{repo.forks}</span></div>
 						</div>
 					</div>
 				</a>
